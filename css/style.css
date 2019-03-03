@@ -88,16 +88,6 @@ z-index: 0;
 	}
 
 	.lj-preloader {
-		background: #fafafa url('../img/preloader.svg') no-repeat center center;
-		bottom: 0;
-		height: 100%;
-		left: 0;
-		overflow: hidden;
-		position: fixed;
-		right: 0;
-		top: 0;
-		width: 100%;
-		z-index: 99999;
 	}
 
 
