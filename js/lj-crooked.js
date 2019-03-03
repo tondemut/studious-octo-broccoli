@@ -1,10 +1,3 @@
-/*
-  Author: Lumberjacks
-  Template: Crooked (Landing Page)
-  Version: 1.0
-  URL: http://themeforest.net/user/Lumberjacks/
-*/
-
 "use strict";
 
   $(document).ready(function (){
@@ -189,12 +182,4 @@
     }
   });
 
-  // Preloader
-  // Change delay and fadeOut speed (in miliseconds)
-  $(window).load(function() {
-    $('.lj-preloader').delay(100).fadeOut(200);
-    $('.lj-insignia, .lj-countdown').delay(500).animate({
-      opacity: '1'
-    }, 1000);
 
-  });
