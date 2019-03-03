@@ -1,0 +1,1590 @@
+/*
+	Author: Lumberjacks
+	Template: Crooked (Landing Page)
+	Version: 1.0
+	URL: http://themeforest.net/user/Lumberjacks/
+*/
+
+
+
+/* TABLE OF CONTENTS
+
+	1. Import section
+	2. Basic styles
+	3. Typography
+	4. Menu
+	5. Header
+	6. About
+	7. Media
+	8. Pricing
+	9. Trial
+	10. Subscribe
+	11. Team
+	12.	Socials
+	13.	Contact
+	14. Breakpoints
+
+*/
+
+
+
+/* 1. IMPORT SECTION */
+
+	@import url("bootstrap.css");
+	@import url("font-awesome.min.css");
+	@import url("owl.carousel.css");
+	@import url("featherlight.css");
+	@import url("featherlight.gallery.css");
+	@import url("animate.css");
+
+
+
+/* 2. BASIC STYLES */
+
+	html, body {
+		height: 100%;
+	}
+
+	body {
+		font: 16px/1.5 "Century Gothic", "Trebuchet MS", Helvetica, sans-serif;
+		background-color: #fff;
+		color: #262626;
+		font-weight: 300;
+		-webkit-font-smoothing: antialiased;
+		text-rendering: optimizeLegibility;
+		position: relative;
+z-index: 0;
+	}
+
+	a { 
+		color: #262626;
+		transition: all 0.25s ease-in-out 0s;
+		-moz-transition: all 0.25s ease-in-out 0s;
+		-webkit-transition: all 0.25s ease-in-out 0s;
+		-o-transition: all 0.25s ease-in-out 0s;
+		-ms-transition: all 0.25s ease-in-out 0s;
+	}
+
+	a:hover {
+		color: #769043;
+	}
+
+	a, a:hover, a:active, a:focus {
+		outline: 0;
+		border: 0;
+		text-decoration: none;
+	}
+
+	.lj-float-left {
+		float: left;
+	}
+
+	.lj-float-right {
+		float: right;
+	}
+	
+	.lj-block-center {
+		display: block;
+		margin-left: auto;
+		margin-right: auto;
+	}
+	
+	.lj-show {
+		display: block !important;
+	}
+	
+	.lj-hide {
+		display: none !important;
+		visibility: hidden !important;
+	}
+
+	.lj-preloader {
+		background: #fafafa url('../img/preloader.svg') no-repeat center center;
+		bottom: 0;
+		height: 100%;
+		left: 0;
+		overflow: hidden;
+		position: fixed;
+		right: 0;
+		top: 0;
+		width: 100%;
+		z-index: 99999;
+	}
+
+
+
+/* 3. TYPOGRAPHY */
+
+	p {
+		line-height: 1.5;
+	}
+    
+	.lj-text-uppercase {
+		text-transform: uppercase;
+	}
+
+	.lj-text-center {
+		text-align: center;
+	}
+
+	.lj-text-left {
+		text-align: left;
+	}
+
+	.lj-text-right {
+		text-align: right;
+	}
+
+	.lj-text-justify {
+		text-align: justify;
+	}
+
+	.lj-text-underline {
+		text-decoration: underline;
+	}
+
+
+
+/* 4. MENU */
+
+	nav {
+		width: 100%;
+		height: 70px;
+		position: fixed;
+		background-color: #fff !important;
+		padding-top: 15px;
+		padding-bottom: 15px;
+		z-index: 3;
+		border-bottom: 1px solid #ddd;
+		transition: all 0.25s ease-in-out 0s;
+		-moz-transition: all 0.25s ease-in-out 0s;
+		-webkit-transition: all 0.25s ease-in-out 0s;
+		-o-transition: all 0.25s ease-in-out 0s;
+		-ms-transition: all 0.25s ease-in-out 0s;
+	}
+
+	.lj-logo {
+		display: block;
+		position: absolute;
+		top: -30px;
+		left: 50%;
+		transition: all 0.125s ease-in-out 0s;
+		-moz-transition: all 0.125s ease-in-out 0s;
+		-webkit-transition: all 0.125s ease-in-out 0s;
+		-o-transition: all 0.125s ease-in-out 0s;
+		-ms-transition: all 0.125s ease-in-out 0s;
+	}
+
+	.lj-logo:hover {
+		top: -20px;
+	}
+
+	.lj-logo a {
+		display: inline-block;
+	}
+
+	.lj-logo i {
+		text-align: center;
+	    display: block;
+	    opacity: 0;
+	    width: 100%;
+	    position: absolute;
+	    top: 100px;
+	    color: #181818;
+	    transition: all 0.5s ease-in-out;
+		-moz-transition: all 0.5s ease-in-out;
+		-webkit-transition: all 0.5s ease-in-out;
+		-o-transition: all 0.5s ease-in-out;
+		-ms-transition: all 0.5s ease-in-out;
+	}
+
+	.lj-logo i.active {
+		opacity: 1;
+	}
+	
+	.lj-menu-icons {
+		display: block;
+		height: 40px;
+	}
+
+	.lj-menu {
+		display: inline-block;
+	}
+
+	.lj-menu,
+	.lj-menu-mobile {
+		list-style-type: none;
+		margin: 0;
+		line-height: 40px;
+		padding: 0;
+	}
+
+	.lj-menu li,
+	.lj-menu-mobile li {
+		display: inline-block;
+		margin-right: 5px;
+	}
+
+	.lj-menu li:first-child a,
+	.lj-menu-mobile li:first-child a {
+		margin-left: 0;
+	}
+
+	.lj-menu li a,
+	.lj-menu-mobile li a {
+		height: 40px;
+		display: inline-block;
+		line-height: 30px;
+		text-align: center;
+		color: #181818;
+		font-size: 1.1em;
+		margin-left: 25px;
+	}
+
+	.lj-menu li a:hover,
+	.lj-menu-mobile li a:hover {
+		color: #769043;		
+	}
+
+	.lj-menu-mobile {
+		display: none;
+	}
+
+/* 5. HEADER */
+
+	header {
+		width: 100%;
+		overflow: hidden;
+		position: relative;
+		z-index: -1;
+	}
+	
+	header > .container {
+		height: 100%;
+		position: relative;
+		padding-top: 270px;
+		padding-bottom: 200px;
+	}
+
+	header .backstretch img {
+		position: fixed !important;
+	}
+	
+	.lj-overlay {
+		width: 100%;
+		height: 100%;		
+		position: absolute;
+		top: 0;
+		left: 0;
+	}
+	
+	.lj-background-repeat {
+	    background-repeat: repeat;
+	}
+	
+	.lj-background-no-repeat {
+		background-repeat: no-repeat;
+	}
+	
+	.lj-overlay-none {
+		display: none;
+		visibility: hidden;
+	}
+	
+	.lj-overlay-image {
+		background-image: url('../img/image-overlay.png');
+		background-repeat: repeat;
+	}
+	
+	.lj-overlay-color {
+	    background-color: rgba(0,0,0,0.7);
+	    opacity: 0;
+	}
+	
+	.lj-overlay-gradient {
+		background: -moz-linear-gradient(320deg,  rgba(103, 225, 255, 0.7) 0%, rgba(255, 255, 255, 0.85) 100%); /* FF3.6+ */
+		background: -webkit-gradient(linear, right bottom, left top, color-stop(0%,rgba(103, 225, 255, 0.7)), color-stop(100%,rgba(255, 255, 255, 0.85))); /* Chrome,Safari4+ */
+		background: -webkit-linear-gradient(320deg,  rgba(103, 225, 255, 0.7) 0%,rgba(255, 255, 255, 0.85) 100%); /* Chrome10+,Safari5.1+ */
+		background: -o-linear-gradient(320deg,  rgba(103, 225, 255, 0.7) 0%,rgba(255, 255, 255, 0.85) 100%); /* Opera 11.10+ */
+		background: -ms-linear-gradient(320deg,  rgba(103, 225, 255, 0.7) 0%,rgba(255, 255, 255, 0.85) 100%); /* IE10+ */
+		background: linear-gradient(320deg, rgba(103, 225, 255, 0.7) 0%,rgba(255, 255, 255, 0.85) 100%); /* W3C */
+		filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00ccff', endColorstr='#c4ff00',GradientType=1 ) progid:DXImageTransform.Microsoft.AlphaImageLoader(src='../img/1x1.png'); /* IE6-9 fallback on horizontal gradient */
+		pointer-events:none;
+	}
+
+	.lj-img {
+		width: 500px;
+		max-width: 85%;
+	}
+
+    .lj-insignia {
+		opacity: 0;
+		text-align: center;
+	}
+
+
+    
+/* 6. ABOUT */
+
+	.about {
+  background: url(../img/about.jpg) no-repeat center center fixed; 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+	}
+	
+		.service {
+background-color: #fafafa;;
+	}
+
+	.about-color-background {
+		background-color: #fafafa;
+	}
+
+	.about > .container {
+		padding-bottom: 100px;
+		padding-top: 100px;
+	}
+
+	.about-slide {
+		width: 100%;
+		cursor: default;
+	}
+
+	.lj-about-title h2 {
+		text-align: center;
+		letter-spacing: 5px;
+		font-size: 1.6em;
+		font-weight: 300;
+		color: #181818;
+	}
+
+	.lj-about-title hr {
+		border: 0;
+		width: 30px;
+		height: 2px;
+		background-color: #181818;
+		margin: 0 auto;
+		display: block;
+		margin-bottom: 50px;
+	}
+
+	.lj-about-paragraph span {
+		color: #565656;
+    	font-family: 'Georgia';
+    	font-style: italic;
+    	font-size: 1em;
+	}
+
+	.lj-about-icon-box {
+		padding: 0 20px;
+		margin-top: 60px;
+	}
+
+	.lj-about-icon-box img {
+		display: block;
+		margin: 0 auto;
+		width: auto !important;
+	}
+
+	.lj-about-icon-box h3 {
+		font-weight: 300;
+		font-size: 1.2em;
+		text-align: center;
+		word-wrap: break-word;
+		color: #181818;
+		letter-spacing: 2px;
+		line-height: 40px;
+	}
+
+	.lj-about-icon-box p {
+		font-size: 0.9em;
+		color: #565656;
+		text-align: center;
+	}
+
+	.lj-about-1-image img {
+		max-width: 100%;
+		margin-top: 60px;
+	}
+
+	.lj-about-1-list ul {
+		list-style-type: none;
+		margin-top: 60px;
+	}
+
+	.lj-about-1-list ul li {
+		margin-top: 30px;
+	}
+
+	.lj-about-1-list ul li > i {
+		color: #769043;
+		position: absolute;
+	}
+
+	.lj-about-1-list ul li > span {
+		font-size: 1.2em;
+		letter-spacing: 2px;
+		margin-left: 60px;
+	}
+
+	.lj-about-1-list ul li > p {
+		font-size: 0.9em;
+    	color: #565656;
+    	margin-left: 60px;
+	}
+
+	.lj-about-2-image img {
+		max-width: 100%;
+		margin-top: 60px;
+		padding: 0 40px;
+	}
+
+	.lj-about-2-list ul {
+		list-style-type: none;
+		margin-top: 60px;
+		padding-left: 0;
+	}
+
+	.lj-about-2-list ul li {
+		margin-top: 30px;
+	}
+
+	.lj-about-2-list ul li > i {
+		color: #769043;
+		position: absolute;
+	}
+
+	.lj-about-2-list ul li > span {
+		font-size: 1.2em;
+		letter-spacing: 2px;
+		margin-left: 60px;
+	}
+
+	.lj-about-2-list ul li > p {
+		font-size: 0.9em;
+    	color: #565656;
+    	margin-left: 60px;
+	}
+
+	.lj-about-3-image {
+		text-align: center;
+	}
+
+	.lj-about-3-image img {
+		width: auto !important;
+		max-width: 100%;
+		margin: 0 auto;
+	}
+
+
+
+
+/* 7. MEDIA */
+
+	.images-carousel {
+		background-color: #fff;
+		padding: 5px 0;
+	}
+
+	.owl-item:hover {
+		cursor: pointer;
+	}
+
+	.gallery .owl-item a {
+		width: 100%;
+		height: 100%;
+		position: absolute;
+		top: 0;
+		color: #fff;
+		background-color: rgba(189,193,195,0.2);
+		transition: all 0.25s ease-in-out;
+		-moz-transition: all 0.25s ease-in-out;
+		-webkit-transition: all 0.25s ease-in-out;
+		-o-transition: all 0.25s ease-in-out;
+		-ms-transition: all 0.25s ease-in-out;
+	}
+
+	.gallery .owl-item a:hover {
+		color: #fff;
+		background-color: transparent;
+	}
+
+	.video {
+		width: 100%;
+		overflow: hidden;
+		background: url('../img/video.jpg');
+		background-size: cover;
+		background-repeat:no-repeat;
+		background-attachment: fixed;
+	}
+
+	.video > .container {
+		padding-top: 200px;
+		padding-bottom: 200px;
+	}
+
+	.lj-video-title h2 {
+		text-align: center;
+		letter-spacing: 5px;
+		font-size: 1.6em;
+		font-weight: 300;
+		margin-top: 0;
+		color: #fff;
+	}
+
+	.lj-video-title hr {
+		border: 0;
+		width: 30px;
+		height: 2px;
+		background-color: #fff;
+		margin: 0 auto;
+		display: block;
+		margin-bottom: 50px;
+	}
+
+	.lj-video-button > a {
+		display: block;
+		margin: 0 auto;
+		width: 74px;
+		height: 74px;
+		background: url("../img/play.png");
+		opacity: 0.5;
+	}
+
+	.lj-video-button a:hover {
+		opacity: 1;
+	}
+
+	.lj-video-holder {
+		display: none;
+	}
+
+
+
+
+/* 8. PRICING */
+
+	.pricing {
+		width: 100%;
+		background-color: #fff;
+		overflow: hidden;
+	}
+
+	.pricing > .container {
+		padding-top: 150px;
+		padding-bottom: 150px;
+	}
+
+	.lj-pricing-panel {
+		display: block;
+		position: relative;
+		top: 0;
+		border: 1px solid #bdc1c3;
+		width: 100%;
+		text-align: center;
+		transition: all 0.25s ease-in-out 0s;
+		-moz-transition: all 0.25s ease-in-out 0s;
+		-webkit-transition: all 0.25s ease-in-out 0s;
+		-o-transition: all 0.25s ease-in-out 0s;
+		-ms-transition: all 0.25s ease-in-out 0s;
+	}
+
+	.lj-pricing-panel:hover {
+		border: 1px solid #ddd;
+	}
+
+	.lj-pricing-panel.popular {
+		border: 2px solid #667755;
+	}
+
+	.lj-pricing-panel.popular:hover {
+		border: 2px solid #769043;
+	}
+
+	.lj-pricing-panel .price {
+		padding-top: 20px;
+		padding-bottom: 20px;
+		font-weight: 300;
+		color: #bdc1c3;
+		font-size: 2em;
+		letter-spacing: 2px;
+	}
+
+	.lj-pricing-panel.popular .price {
+		color: #777;
+	}
+
+	.lj-pricing-panel .price span {
+		font-size: 0.5em;
+		position: relative;
+		display: inline-block;
+		color: #ccc;
+		top: -10px;
+		left: -5px;
+	}
+
+	.lj-pricing-panel .price span:nth-child(2) {
+		top: 0;
+		left: 0;
+	}
+
+	.lj-pricing-panel .price-tag h3 {
+		text-align: center;
+		position: relative;
+		left: 20px;
+		letter-spacing: 5px;
+		font-size: 1.6em;
+		font-weight: 300;
+		margin-top: 20px;
+		color: #262626;
+		margin-bottom: 20px;
+		display: inline;
+		transition: all 0.25s ease-in-out 0s;
+		-moz-transition: all 0.25s ease-in-out 0s;
+		-webkit-transition: all 0.25s ease-in-out 0s;
+		-o-transition: all 0.25s ease-in-out 0s;
+		-ms-transition: all 0.25s ease-in-out 0s;
+	}
+
+	.lj-pricing-panel:hover .price-tag h3 {
+		left: 0;
+	}
+
+	.lj-pricing-panel .price-tag span {
+		font-size: 1.4em;
+		display: inline-block;
+		position: relative;
+		width: 30px;
+		left: 0px;
+		color: #769043;
+		opacity: 0;
+		transition: all 0.25s ease-in-out 0s;
+		-moz-transition: all 0.25s ease-in-out 0s;
+		-webkit-transition: all 0.25s ease-in-out 0s;
+		-o-transition: all 0.25s ease-in-out 0s;
+		-ms-transition: all 0.25s ease-in-out 0s;
+	}
+
+	.lj-pricing-panel:hover .price-tag span {
+		opacity: 1;
+		left: 10px;
+	}
+
+	.lj-pricing-panel hr {
+		border: 0;
+		width: 100%;
+		height: 1px;
+		background-color: #bdc1c3;
+		margin: 0 auto;
+		display: block;
+	}
+
+	.lj-pricing-panel ul.features {
+		background-color: #bdc1c3;
+		padding-top: 10px;
+		padding-bottom: 10px;
+		transition: all 0.25s ease-in-out 0s;
+		-moz-transition: all 0.25s ease-in-out 0s;
+		-webkit-transition: all 0.25s ease-in-out 0s;
+		-o-transition: all 0.25s ease-in-out 0s;
+		-ms-transition: all 0.25s ease-in-out 0s;
+	}
+
+	.lj-pricing-panel.popular ul.features {
+		background-color: #667755;
+	}
+
+	.lj-pricing-panel.popular:hover ul.features {
+		background-color: #769043;
+	}
+
+	.lj-pricing-panel.popular ul.features li {
+		color: #fff;
+	}
+
+	.lj-pricing-panel:hover ul.features {
+		background-color: #ddd;
+	}
+
+	.lj-pricing-panel ul.features li {
+		color: #777;
+	}
+
+	.lj-pricing-panel ul {
+		list-style: none;
+		padding-left: 40px;
+		text-align: left;	}
+
+	.lj-pricing-panel ul li {
+	    font-size: 1em;
+	    color: #565656;
+		padding-top: 10px;
+		padding-bottom: 10px;
+	}
+
+	.lj-pricing-panel ul li i {
+		margin-right: 30px;
+		color: #fff;
+	}
+
+	.lj-pricing-panel ul li i.fa-close {
+		color: #a86464;
+	}
+
+	.lj-pricing-panel ul li i.fa-check {
+		color: #769043;
+	}
+
+
+
+/* 9. TRIAL */
+
+	.trial {
+		width: 100%;
+		background-color: #667755;
+		overflow: hidden;
+	}
+
+	.trial > .container {
+		padding-top: 110px;
+		padding-bottom: 130px;
+	}
+
+	.lj-trial-title h2 {
+		text-align: center;
+		letter-spacing: 5px;
+		font-size: 1.6em;
+		font-weight: 300;
+		margin-top: 0;
+		color: #fff;
+	}
+
+	.lj-trial-title hr {
+		border: 0;
+		width: 30px;
+		height: 2px;
+		background-color: #fff;
+		margin: 0 auto;
+		display: block;
+		margin-bottom: 50px;
+	}
+
+	.lj-trial-paragraph {
+		font-family: 'Georgia';
+		font-style: italic;
+		font-size: 1em;
+		color: #fff;
+	}
+
+	.lj-trial-button {
+		background: transparent;
+		font-family: 'Georgia';
+		font-style: italic;
+		font-size: 1.2em;
+		font-weight: 300;
+		padding: 10px 30px;
+		display: inline-block;
+		margin-top: 40px;
+		z-index: 1;
+		position: relative;
+		border: 2px solid #fff;
+		color: #fff;
+		overflow: hidden;
+	}
+	
+	.lj-trial-button:focus {
+  background: transparent;
+  font-family: 'Georgia';
+  font-style: italic;
+  font-size: 1.2em;
+  font-weight: 300;
+  padding: 10px 30px;
+  display: inline-block;
+  margin-top: 40px;
+  z-index: 1;
+  position: relative;
+  border: 2px solid #fff;
+  color: #fff;
+  overflow: hidden;
+}
+
+	.lj-trial-button span {
+		position: relative;
+		left: 10px;
+		transition: left 0.25s ease-in-out;
+		-moz-transition: left 0.25s ease-in-out;
+		-webkit-transition: left 0.25s ease-in-out;
+		-o-transition: left 0.25s ease-in-out;
+		-ms-transition: left 0.25s ease-in-out;
+	}
+
+	.lj-trial-button:hover span {
+		left: -5px;
+	}
+
+	.lj-trial-button i {
+		display: inline-block;
+		position: relative;
+		width: 20px;
+		color: #667755;
+		left: 0;
+		opacity: 0;
+		transition: all 0.25s ease-in-out;
+		-moz-transition: all 0.25s ease-in-out;
+		-webkit-transition: all 0.25s ease-in-out;
+		-o-transition: all 0.25s ease-in-out;
+		-ms-transition: all 0.25s ease-in-out;
+	}
+
+	.lj-trial-button:hover i {
+		left: 10px;
+		opacity: 1;
+	}
+
+	.lj-trial-button:hover {
+		border: 2px solid #fff;
+		background-color: #fff;
+		color: #667755;
+	}
+	
+
+_________________________________
+
+	.contact {
+		width: 100%;
+		background-color: #667755;
+		overflow: hidden;
+	}
+
+	.contact > .container {
+		padding-top: 105px;
+		padding-bottom: 130px;
+	}
+
+	.lj-contact-title h2 {
+		text-align: center;
+		letter-spacing: 5px;
+		font-size: 1.6em;
+		font-weight: 300;
+		margin-top: 0;
+		color: #fff;
+	}
+
+	.lj-contact-title hr {
+		border: 0;
+		width: 30px;
+		height: 2px;
+		background-color: #fff;
+		margin: 0 auto;
+		display: block;
+		margin-bottom: 50px;
+	}
+
+	.lj-contact-paragraph {
+		font-family: 'Georgia';
+		font-style: italic;
+		font-size: 1em;
+		color: #fff;
+	}
+
+
+	.lj-contact-button {
+		background: transparent;
+		font-family: 'Georgia';
+		font-style: italic;
+		font-size: 1.2em;
+		font-weight: 300;
+		padding: 10px 30px;
+		display: inline-block;
+		margin-top: 40px;
+		z-index: 1;
+		position: relative;
+		border: 2px solid #262626;
+		color: #262626;
+		overflow: hidden;
+	}
+
+	.lj-contact-button span {
+		position: relative;
+		left: 10px;
+		transition: left 0.25s ease-in-out;
+		-moz-transition: left 0.25s ease-in-out;
+		-webkit-transition: left 0.25s ease-in-out;
+		-o-transition: left 0.25s ease-in-out;
+		-ms-transition: left 0.25s ease-in-out;
+	}
+
+	.lj-contact-button:hover span {
+		left: -5px;
+	}
+
+	.lj-contact-button i {
+		display: inline-block;
+		position: relative;
+		width: 20px;
+		color: #262626;
+		left: 0;
+		opacity: 0;
+		transition: all 0.25s ease-in-out;
+		-moz-transition: all 0.25s ease-in-out;
+		-webkit-transition: all 0.25s ease-in-out;
+		-o-transition: all 0.25s ease-in-out;
+		-ms-transition: all 0.25s ease-in-out;
+	}
+
+	.lj-contact-button:hover i {
+		left: 10px;
+		opacity: 1;
+	}
+
+	.lj-contact-button:hover {
+		border: 2px solid #262626;
+		background-color: #fff;
+		color: #fff;
+	}
+
+
+
+
+
+/* 10. SUBSCRIBE */
+
+	.subscribe {
+		width: 100%;
+		background-color: #fff;
+		overflow: hidden;
+	}
+
+	.subscribe > .container {
+		padding-top: 150px;
+		padding-bottom: 150px;
+	}
+
+	.lj-subscribe-title h2 {
+		text-align: center;
+		letter-spacing: 5px;
+		font-size: 1.6em;
+		font-weight: 300;
+		margin-top: 0;
+		color: #181818;
+	}
+
+	.lj-subscribe-title hr {
+		border: 0;
+		width: 30px;
+		height: 2px;
+		background-color: #181818;
+		margin: 0 auto;
+		display: block;
+		margin-bottom: 50px;
+	}
+
+	.lj-subscribe-paragraph span {
+		color: #565656;
+    	font-family: 'Georgia';
+    	font-style: italic;
+    	font-size: 1em;
+	}
+
+    .lj-subscribe-form {
+    	margin-top: 0;
+    }
+
+    .lj-subscribe-form input[type=text] {
+    	width: 100%;
+    	height: 40px;
+    	padding: 10px 0;
+    	border-top: 0;
+    	border-left: 0;
+    	border-right: 0;
+        border-bottom: 1px solid #dedede;
+		line-height: 20px;
+		font-size: 1em;
+		font-family: 'Georgia';
+		font-style: italic;
+		background-color: transparent;
+		color: #769043;
+		float: left;
+		transition: all 0.25s ease-in-out 0s;
+		-moz-transition: all 0.25s ease-in-out 0s;
+		-webkit-transition: all 0.25s ease-in-out 0s;
+		-o-transition: all 0.25s ease-in-out 0s;
+		-ms-transition: all 0.25s ease-in-out 0s;
+    }
+
+    .lj-subscribe-form input[type=text]:focus {
+    	outline: 0;
+    	border-bottom: 1px solid #769043;
+    }
+    
+    .lj-subscribe-form button {
+    	height: 40px;
+    	padding: 0;
+    	border: 0;
+		background-color: transparent;
+        color: #777;
+        display: block;
+		font-family: 'Georgia';
+		font-size: 1em;
+		text-align: right;
+		font-style: italic;
+		font-weight: 700;
+		float: right;
+		outline: none;
+		position: relative;
+		left : 20px;
+		transition: all 0.25s ease-in-out 0s;
+		-moz-transition: all 0.25s ease-in-out 0s;
+		-webkit-transition: all 0.25s ease-in-out 0s;
+		-o-transition: all 0.25s ease-in-out 0s;
+		-ms-transition: all 0.25s ease-in-out 0s;
+    }
+
+    .lj-subscribe-form button:hover {
+    	background-color: transparent;
+    	color: #769043;
+    	left: 0;
+    }
+
+    .lj-subscribe-form button i {
+    	margin-left: 5px;
+    	display: inline-block;
+    	width: 20px;
+    	color: #769043;
+    	position: relative;
+    	left: -20px;
+    	opacity: 0;
+		transition: all 0.25s ease-in-out 0s;
+		-moz-transition: all 0.25s ease-in-out 0s;
+		-webkit-transition: all 0.25s ease-in-out 0s;
+		-o-transition: all 0.25s ease-in-out 0s;
+		-ms-transition: all 0.25s ease-in-out 0s;
+    }
+
+    .lj-subscribe-form button:hover i {
+    	left: 0;
+    	opacity: 1;
+    }
+
+    .lj-subscribe-message {
+		display: block;
+    	height: 80px;
+    	padding: 20px 0;
+    	color: #565656;
+    	font-size: 1em;
+    	font-family: 'Georgia';
+    	font-style: italic;
+    }
+
+    .lj-subscribe-message i {
+    	margin-right: 5px;
+    }
+
+	.lj-subscribe-message .fa-warning {
+    	color: #ff5c5c;
+    }
+
+    .lj-subscribe-message .fa-check {
+    	color: #89d460;
+    }
+
+
+
+
+/* 11. TEAM */
+
+	.team {
+		background-color: #fff;
+		overflow: hidden;
+		padding-top: 150px;
+		padding-bottom: 100px;
+	}
+
+	.team > .container {
+		padding-bottom: 50px;
+	}
+
+	.team > .container:first-child {
+		padding-bottom: 150px;
+	}
+
+	.team-slide {
+		width: 100%;
+		cursor: default;
+	}
+
+	.lj-team-title h2 {
+		text-align: center;
+		letter-spacing: 5px;
+		font-size: 1.6em;
+		font-weight: 300;
+		margin-bottom: 10px;
+		color: #fff;
+	}
+
+	.lj-team-title hr {
+		border: 0;
+		width: 30px;
+		height: 2px;
+		background-color: #fff;
+		margin: 0 auto;
+		display: block;
+		margin-bottom: 50px;
+	}
+
+	.lj-team-quote i {
+		line-height: 1.5em;
+		margin-top: 20px;
+		color: #777;
+	}
+
+	.lj-team-quote blockquote {
+		width: 80%;
+		margin: 10px 0 0;
+    	font-family: 'Georgia';
+		font-style: italic;
+		font-size: 1.25em;
+		color: #fff;
+	}
+
+	.lj-team-quote blockquote cite {
+		font-size: 0.8em;
+		font-weight: 300;
+		font-style: italic;
+		margin-top: 10px;
+		display: block;
+		color: #fff;
+	}
+
+	.lj-team-paragraph p {
+		color: #fff;
+		display: block;
+		font-size: 0.9em;
+	}
+	
+	.lj-team-paragraph p.lj-team-leading {
+		color: #fff;
+		font-size: 1.2em;
+	}
+
+	.lj-team-member p {
+		color: #fff;
+		display: block;
+		font-size: 0.9em;
+	}
+
+	.lj-team-member p.lj-team-leading {
+		color: #fff;
+		font-family: 'Georgia';
+	    font-style: italic;
+	    font-size: 1em;
+	}
+
+	.lj-team-member ul {
+		list-style-type: none;
+		padding-left: 0;
+		margin-top: 50px;
+	}
+
+	.lj-team-member ul li {
+		display: inline-block;
+		margin-right: 20px;
+	}
+
+	.lj-team-member i {
+		font-size: 1.5em;
+	}
+
+	.lj-team-member ul li a {
+		color: #667755;
+	}
+
+	.lj-team-member ul li a:hover {
+		color: #ccc;
+	}
+
+	.lj-team-image {
+		position: relative;
+	}
+
+	.lj-team-image img {
+		width: 100%;
+		border: 2px solid #ccc;
+	}
+
+	.lj-team-image h2 {
+		margin-top: 20px;
+		color: #fff;
+		font-size: 1.2em;
+		letter-spacing: 2px;
+		font-weight: 300;
+		position: absolute;
+	    bottom: 0;
+	    left: 0;
+	    display: block;
+	    background: rgba(0, 0, 0, 0.3);
+	    width: 100%;
+	    padding: 5px 20px;
+	    margin: 0;
+	    border: 2px solid #ccc;
+	    border-top: none;
+	}
+
+	.lj-team-caption h3 {
+		color: #fff;
+		font-size: 0.9em;
+		letter-spacing: 2px;
+		font-weight: 300;
+		padding-left: 22px;
+	}
+
+
+
+
+/* 12. SOCIALS */
+
+	.socials {
+		width: 100%;
+		background-color: #fff;
+		overflow: hidden;
+	}
+
+	.socials > .container {
+		padding-top: 150px;
+		padding-bottom: 150px;
+	}
+
+	.lj-socials-title h2 {
+		text-align: center;
+		letter-spacing: 5px;
+		font-size: 1.6em;
+		font-weight: 300;
+		margin-top: 0;
+		color: #181818;
+	}
+
+	.lj-socials-title hr {
+		border: 0;
+		width: 30px;
+		height: 2px;
+		background-color: #181818;
+		margin: 0 auto;
+		display: block;
+		margin-bottom: 50px;
+	}
+
+	.lj-socials-paragraph {
+		font-family: 'Georgia';
+		font-style: italic;
+		font-size: 1em;
+		color: #565656;
+	}
+
+	.lj-social-icons {
+		list-style-type: none;
+		padding: 0;
+		display: block;
+		text-align: center;
+		line-height: 80px;
+	}
+
+	.lj-social-icons li {
+		display: inline-block;
+		margin-right: 10px;
+		margin-left: 10px;
+	}
+
+	.lj-social-icons li a {
+		height: 80px;
+		display: inline-block;
+		padding-left: 15px;
+		padding-right: 15px;
+		line-height: 80px;
+		text-align: center;
+		color: #181818;
+		font-size: 2em;
+	}
+
+	.lj-social-icons li a:hover {
+		color: #769043;		
+	}
+
+
+
+
+/* 13. CONTACT */
+
+	.contact {
+		width: 100%;
+		background-color: #fafafa;
+		overflow: hidden;
+	}
+
+	.contact > .container {
+		padding-top: 150px;
+		padding-bottom: 150px;
+		color: #262626;
+	}
+
+	.lj-contact-title h2 {
+		text-align: center;
+		letter-spacing: 5px;
+		font-size: 1.6em;
+		font-weight: 300;
+		margin-top: 0;
+		color: #181818;
+	}
+
+	.lj-contact-title hr {
+		border: 0;
+		width: 30px;
+		height: 2px;
+		background-color: #181818;
+		margin: 0 auto;
+		display: block;
+		margin-bottom: 50px;
+	}
+
+	.lj-contact-paragraph {
+		font-family: 'Georgia';
+		font-style: italic;
+		font-size: 1em;
+		color: #565656;
+		margin-bottom: 50px;
+	}
+
+	.lj-contact-left span {
+	    font-size: 1.2em;
+	    letter-spacing: 2px;
+	}
+
+	.lj-contact-left p {
+		margin-left: 30px;
+		font-family: Georgia;
+	    font-style: italic;
+	    color: #777;
+	}
+
+	.lj-contact-left i {
+		color: #777;
+		margin-right: 10px;
+	}
+
+	.lj-contact-right .row {
+		margin-bottom: 50px;
+	}
+
+	.lj-contact-right .row:last-child {
+		margin-bottom: 0;
+	}
+
+	.lj-contact-right img {
+		border: 2px solid #fff;
+		display: inline-block;
+		vertical-align: top;
+		margin-right: 20px;
+	}
+
+	.lj-contact-details {
+		display: inline-block;
+	}
+
+	.lj-contact-details p {
+	    color: #262626;
+	    font-size: 1.2em;
+	    letter-spacing: 2px;
+	    font-weight: 300;
+	    margin-top: 0;
+	    margin-bottom: 5px;
+	}
+
+	.lj-contact-details span {
+		font-family: 'Georgia';
+	    font-style: italic;
+	    font-size: 1em;
+	    color: #777;
+	}
+
+	.lj-contact-details ul {
+		list-style-type: none;
+		padding-left: 0;
+		color: #262626;
+	}
+
+	.lj-contact-details i {
+		color: #777;
+		margin-right: 10px;
+	}
+
+
+
+
+/* 14. FOOTER */
+
+	footer {
+		width: 100%;
+		background-color: #202020;
+		overflow: hidden;
+	}
+
+	footer > .container {
+		padding-top: 40px;
+		padding-bottom: 40px;
+		color: #ddd;
+	}
+
+
+
+
+/* 15. BREAKPOINTS */
+
+	@media (min-width: 768px) and (max-width: 991px) {
+
+	    .lj-subscribe-form {
+	    	margin-top: 20px;
+	    }
+
+	    .lj-pricing-panel ul {
+	    	padding-left: 10px;
+	    }
+
+	    .lj-pricing-panel ul li i {
+	    	margin-right: 5px;
+	    }
+	}
+
+	@media (max-width: 767px) {
+
+		.lj-menu {
+			display: none;
+		}
+
+		.lj-menu-mobile {
+			display: inline-block;
+		}
+
+		nav {
+			position: absolute;
+		}
+
+		header,
+		header > .container {
+			height: auto;
+		}
+
+		.wrapper {
+			width: 100%;
+			position: static;
+			margin-top: 50px !important;
+			margin-bottom: 50px;
+		}
+
+		.lj-scroll-down {
+			display: none;
+		}
+
+		.lj-about-paragraph {
+			margin-top: 20px;
+			font-size: 0.8em;
+		}
+
+		.lj-about-title hr {
+			margin: 0 auto;
+		}
+
+		.lj-about-1-list ul {
+			padding-right: 0px;
+		}
+		
+		.lj-about-2-list ul {
+			padding-left: 20px;
+			padding-right: 20px;
+		}
+
+		.video {
+			background-attachment: scroll;
+		}
+
+		.lj-pricing-panel {
+			width: 90%;
+			max-width: 400px;
+			margin: 0 auto;
+			margin-bottom: 50px;
+		}
+	    
+		.lj-subscribe-title hr {
+			float: none;
+			margin: 0 auto;
+		}
+
+	    .lj-subscribe-form {
+	    	margin-top: 20px;
+	    	text-align: center;
+	    }
+
+	    .lj-subscribe-paragraph {
+	    	margin-top: 20px;
+	    }
+
+	    .lj-subscribe-paragraph span {
+	    	font-size: 0.8em;
+	    }
+
+		.lj-trial-title hr {
+			float: none;
+			margin: 0 auto;
+		}
+
+		.lj-trial-paragraph {
+			margin-top: 20px;
+			font-size: 0.8em;
+		}
+
+		.lj-trial-paragraph p {
+			text-align: center;
+		}
+
+		.lj-team-title hr {
+			margin-bottom: 20px;
+		}
+
+	    .lj-team-member p.lj-team-leading {
+	    	margin-top: 0;
+	    }
+
+		.lj-contact-title hr {
+			margin: 0 auto;
+		}
+
+		.lj-contact-paragraph {
+			margin-top: 20px;
+			font-size: 0.8em;
+		}
+
+		.lj-contact-left {
+			text-align: center;
+		}
+
+		.lj-contact-left p {
+	    	margin-left: 0;
+	    }
+
+	    .lj-contact-right {
+	    	margin-top: 50px;
+	    	text-align: center;
+	    }
+
+	    .lj-contact-details {
+	    	text-align: left;
+	    }
+
+	}
+	
+	
+	#whatwedo > .about {
+  background: #fafafa;
+}
+	
+	
